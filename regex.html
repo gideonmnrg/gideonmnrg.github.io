@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function validate() {
+
+          var user = document.getElementById("exampleInputEmail1").value;
+          var user2 = document.getElementById("exampleInputEmail1");
+          var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          var re1= /^[A-Za-z0-9._%+-]+@testdomain\.com$/;
+          if (re.test(user)) {
+              alert("done");
+              return true;
+          }
+          else {
+              user2.style.border = "red solid 3px";
+              return false;
+          }
+      }
+  </script>
+
+  <script type="text/javascript">
+    function validate() {
+
+        var user = document.getElementById("phonenumber").value;
+        var user2 = document.getElementById("phonenumber");
+        var re = /^[7-9][0-9]{9}$/;
+        if (re.test(user)) {
+            alert("done");
+            return true;
+        }
+        else {
+
+            user2.style.border = "red solid 3px";
+            return false;
+        }
+    }
+</script>
+<!-- <script type="text/javascript">
+  var regularExpression = document.getElementById("exampleInputPassword1").value;
+  var regularExpression = new RegExp("^^(?=.*[A-Z]{"+minUpperCase+",})" +
+  "(?=.*[a-z]{"+minLowerCase+",})(?=.*[0-9]{"+minNumerics+",})" +
+  "(?=.*[!@#$\-_?.:{]{"+minSpecialChars+",})" +
+  "[a-zA-Z0-9!@#$\-_?.:{]{"+minLength+","+maxLength+"}$");
+if (pswd.match(regularExpression)) {
+  //Success
+}
+</script> -->
+
+<script type="text/javascript">
+function checkPassword(str)
+{
+  var str = document.getElementById("exampleInputPassword1").value;
+  var str = document.getElementById("exampleInputPassword1")  
+  var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  if (re.test(str)) {
+    alert("done");
+    return true;
+}
+else {
+
+    user2.style.border = "red solid 3px";
+    return false;
+}
+}
+</script>
+<script type="text/javascript">
+function CheckPassword(phonenumber) 
+{ 
+var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+if(phonenumber.value.match(decimal)) 
+{ 
+alert('Correct, try another...')
+return true;
+}
+else
+{ 
+alert('Wrong...!')
+return false;
+}
+} 
+</script>
+
+    <div class="container">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" pattern="^.+?@aiesec.net$" title="Gunakan AIESEC mail (@aiesec.net)" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">No Telepon</label>
+          <input type="number" class="form-control" id="phonenumber" aria-describedby="emailHelp">
+          <div id="phonenumber" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" title="Gunakan Special">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
